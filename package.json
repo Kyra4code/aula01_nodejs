@@ -1,0 +1,9 @@
+{
+  "name": "aula01",
+  "version": "0.0.1",
+  "description": "Teste aula 01",
+  "main": "index.js",
+  "author": "Kyra",
+  "license": "MIT",
+  "type": "module"
+}
