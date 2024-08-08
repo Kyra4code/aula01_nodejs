@@ -6,7 +6,7 @@ const dados = JSON.parse(await fs.readFile("./people.json"));
 /*async function exemplo01(){
 
     //ForEach é como um for com text.lenth
-    
+
     const variavel = await dados;
     variavel.forEach(element => {
         console.log(element.gender);
@@ -113,7 +113,7 @@ pergunta2()*/
 
 
 
-var exemploEvery = ()=>{
+/*var exemploEvery = ()=>{
 
     //o every analisa se todos pertecem ao mesmo valor; ex: pessoa.nat == BR: true (ou) pessoa.name.first == "carlos": false
     const todosBrasi = dados.every(element =>{
@@ -122,4 +122,15 @@ var exemploEvery = ()=>{
     console.log(todosBrasi);
 }
 
-exemploEvery();
+exemploEvery();*/
+
+var exemploSort = ()=>{
+    const dadosOrdenados = dados.sort((p1, p2) =>{
+        return p1.email.localeCompare(p2.email)
+    }).map(element =>{
+        return element.name.first;
+    })
+    console.log(dadosOrdenados)
+}
+
+exemploSort();
